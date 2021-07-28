@@ -1,0 +1,31 @@
+{% extends 'kongoni/base.html'%}
+{% load static %}
+
+{% block content %}
+<head>
+       <!-- CSS CUSTOM -->
+       <link rel="stylesheet" href="{% static 'kongoni/css/market.css' %}" />
+</head>
+<body>
+<div class="content">
+
+    <h3>Kongoni markets</h3>
+    <div class="row">
+        {% for item in market %}
+        <div class="col">
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="{{ item.image.url }}" class="card-img-top" alt="markets image" width="100px" height="200">
+                <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title">{{ item.name}}</h5>
+                    <a href="{{ item.link }}" class="btn btn-primary">More...</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+{% endblock %}
+</html>

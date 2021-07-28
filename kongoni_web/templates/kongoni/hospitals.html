@@ -1,0 +1,30 @@
+{% extends 'kongoni/base.html'%}
+{% load static %}
+
+{% block content %}
+<head>
+        <!-- CSS CUSTOM -->
+        <link rel="stylesheet" href="{% static 'kongoni/css/hospital.css' %}" />
+</head>
+<body> 
+    <div class="content">
+        <h3>Kongoni hospitals</h3>
+            <div class="row">
+                {% for item in hospital %}
+                <div class="col">
+                    <br>
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ item.image.url }}" class="card-img-top" alt="image" width="100" height="250">
+                        <div class="card-body" style="text-align: center;">
+                            <h5 class="card-title">{{ item.name}}</h5>
+                            <a href="{{ item.link}}" class="btn btn-primary">More...</a>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                {% endfor %}
+            </div>
+    </div>
+</body>
+{% endblock %}
+</html>

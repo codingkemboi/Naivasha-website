@@ -1,0 +1,1 @@
+web: gunicorn kongoni.wsgi --log-file -
