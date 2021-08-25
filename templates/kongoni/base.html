@@ -5,16 +5,22 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS navbar -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"/>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    
-    <title></title>
+     
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+      
+      <link rel="icon" href="{% static 'kongoni/images/base/logo.jpg' %}" type="image/icon type" >
+    <title>Naivasha Sub-County</title>
     <link rel="stylesheet" href="{% static 'kongoni/css/base.css' %}">
 
     
@@ -30,49 +36,135 @@
   
   </head>
   <body>
-    <div class="navbar responsive" id="myNavbar">
-      <a href="#" class="btn-disabled" disabled="disabled"><img src="{% static 'kongoni/images/base/logo.jpg' %}" alt="Kongoni logo" height="45px" width="35px" style=" margin: 0px;"></a>
-      <a class="active" href="{% url 'kongoni_web:home' %}"><i class="fa fa-fw fa-home"></i> Home</a>
-      <a href="{% url 'kongoni_web:about' %}">About</a>
-      <a href=" {% url 'kongoni_web:contacts' %} "><i class="fa fa-fw fa-envelope"></i> Contact</a>
-    
-    
-      <div class="dropdown">
-        <button class="dropbtn">Departments 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="{% url 'kongoni_web:hospitals' %}">Hospitals & Health Centre</a>
-          <a href="{% url 'kongoni_web:schools' %}">Education and curriculum development</a>
-          <a href="{% url 'kongoni_web:station' %}">Administration Offices</a>
-          <a href="{% url 'kongoni_web:markets' %}">Markets and Financial Institutions</a>
-          <a href="{% url 'kongoni_web:trends' %}">News and Trends</a>
-          <a href="{% url 'kongoni_web:sports' %}">Sports and Recreational Centre</a>
-        </div>
-      </div> 
-    
-      <div class="dropdown">
-        <button class="dropbtn">Resources 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="{% url 'kongoni_web:wildlife' %}">Wildlife</a>
-          <a href="{% url 'kongoni_web:lakes' %}">Lakes</a>
-          <a href="{% url 'kongoni_web:hotels' %}">Hotels</a>
-          <a href="#">Tourism Area</a>
-        </div>
-      </div>
 
-  <div style="float: right;">
-          {% if user.is_authenticated %}
-              <a href="{% url 'users:logout' %}" style="float:right">Log out</a>          
-              <a href="/" style="float: right; color: rgb(1, 253, 1);" class="btn-disabled" disabled="disabled">Hello, {{ user.username }}.</a>                           
-          {% else %}      
-              <a href="{% url 'users:register' %}" style="float:right">Sign up</a>        
-              <a href="{% url 'users:login' %}" style="float:right"><i class="fa fa-user green-color"></i> Login</a>
-          {% endif %}
-      </div>
+
+
+    <div class="waviy">
+      <span style="--i:1">w</span>
+      <span style="--i:2">e</span>
+      <span style="--i:3">l</span>
+      <span style="--i:4">c</span>
+      <span style="--i:5">o</span>
+      <span style="--i:6">m</span>
+      <span style="--i:7">e</span>
+
     </div>
+
+
+
+
+
+
+
+
+  <!--navbar-->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="color:white;" >
+    <a class="btn disabled" class="navbar-brand" href="#">
+      <img src="{% static 'kongoni/images/base/logo.jpg' %}"
+         alt="Kongoni logo" height="50px" width="40px"
+          style="
+          border-radius: 50%;
+          ">
+    </a> 
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="{% url 'kongoni_web:home' %}"><i class="fa fa-fw fa-home"></i>Home</a> 
+      </li>
+    </ul>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'kongoni_web:about' %}">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'kongoni_web:contacts' %} ">Contact</a>
+          </li>
+
+
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Departments
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'kongoni_web:hospitals' %}">Hospitals & Health Centre</a>
+                        <a class="dropdown-item" href="{% url 'kongoni_web:schools' %}">Education and curriculum development</a>
+                        <a class="dropdown-item" href="{% url 'kongoni_web:station' %}">Administration Offices</a>
+                        <a class="dropdown-item" href="{% url 'kongoni_web:markets' %}">Markets and Financial Institutions</a>
+                        <a class="dropdown-item" href="{% url 'kongoni_web:trends' %}">News and Trends</a>
+              <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'kongoni_web:sports' %}">Sports and Recreational Centre</a>
+                        <a class="dropdown-item" href="{% url 'kongoni_web:fashons' %}">Fashon and Design</a>
+
+            </div>
+          </li>
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Covid 19</a>
+          </li>
+
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'kongoni_web:wildlife' %}">Wildlife</a>
+              <a class="dropdown-item" href="{% url 'kongoni_web:lakes' %}">Lakes</a>
+              <a class="dropdown-item" href="{% url 'kongoni_web:hotels' %}">Hotels</a>
+              <a class="dropdown-item" href="{% url 'kongoni_web:tourism' %}">Tourism Area</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+
+        </ul>
+
+        
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav d-flex" class="d-flex justify-content-between">
+
+          
+            {% if user.is_authenticated %}  
+            <li class="nav-item"></li>            
+              <a class="btn disabled" class="nav-link" href="/" style="float: right; color: rgb(1, 253, 1);">Hello, {{ user.username }}.</a>
+              <a class="nav-link" href="{% url 'users:logout' %}">Log out</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'users:register' %}" style="float:right">Sign up</a>        
+            <a class="nav-link" href="{% url 'users:login' %}" style="float:right"><i class="fa fa-user green-color"></i> Login</a>
+            </li>
+            {% endif %}
+        
+        </ul>
+
+
+
+
+    </div>
+</nav>
 
 
 
@@ -92,13 +184,59 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<!--chatbox-->
+    <div class="chatBoxContainer">
+    <div id="chatbot" class="main-card collapsed">
+      <button id="chatbot_toggle">
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+    </svg>
+      </button>
+      <div class="main-title">
+        <div>
+          <svg viewBox="0 0 640 512" title="robot">
+            <path fill="currentColor" d="M32,224H64V416H32A31.96166,31.96166,0,0,1,0,384V256A31.96166,31.96166,0,0,1,32,224Zm512-48V448a64.06328,64.06328,0,0,1-64,64H160a64.06328,64.06328,0,0,1-64-64V176a79.974,79.974,0,0,1,80-80H288V32a32,32,0,0,1,64,0V96H464A79.974,79.974,0,0,1,544,176ZM264,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,264,256Zm-8,128H192v32h64Zm96,0H288v32h64ZM456,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,456,256Zm-8,128H384v32h64ZM640,256V384a31.96166,31.96166,0,0,1-32,32H576V224h32A31.96166,31.96166,0,0,1,640,256Z" />
+          </svg>
+        </div>
+        <span>Chatbot</span>
+
+      </div>
+      <div class="chat-area" id="message-box">
+      </div>
+      <div class="line"></div>
+      <div class="input-div">
+        <input class="input-message" name="message" type="text" id="message" placeholder="Type your message ..." />
+        <button class="input-send" onclick="send()">
+          <svg style="width:24px;height:24px">
+            <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+</div>
+
+
+
+
   <!-- Site footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
           <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
-       <a href="{% url 'kongoni_web:home' %}">KongoniSite</a>.
+            <a href="{% url 'kongoni_web:home' %}">KongoniSite</a>.
           </p>
         </div>
 
@@ -115,15 +253,22 @@
 </footer>
 
 
-<!-- Optional JavaScript; choose one of the two! -->
+
+</body>
+<!--bootsrap Navbar-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
--->
-  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'kongoni/javascript/js/base.js' %}"> </script>
 </html>

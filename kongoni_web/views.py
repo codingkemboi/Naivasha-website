@@ -75,6 +75,12 @@ def hospital(request):
     context = {'hospital': hospitals}
     return render(request, 'kongoni/hospitals.html', context)
 
+@login_required
+def tourism(request):
+    tourism = Tourism.objects.all()
+    context = {'tourism': tourism}
+    return render(request, 'kongoni/tourism.html', context)
+
 
 def contact(request):
     return render(request, 'kongoni/contacts.html')

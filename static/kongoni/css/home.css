@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+body{
+  margin:0px;
+  padding: 0px;
+  background-image: url("/static/kongoni/images/home/background.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.content
+{
+    margin-bottom: 100px;
+    
+    border-radius: 10px;
+    border-top: none;
+    
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}   
+
+  /* naivasha header stylesheet*/
+
+  .naivasha {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    text-align: center;
+    font-family:monospace;
+    color: white;
+    left: 0%;
+    right: 0;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+/* home of oppotu ani*/
+.line-1 anim-typewriter{
+    min-height: 100%;
+    overflow: hidden;
+    height: calc(100vh - 8em);
+    padding: 4em;
+    color: rgba(255,255,255,.75);
+    font-family: 'Anonymous Pro', monospace;  
+    background-color: rgb(25,25,25);
+}
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: auto;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(45) 1s 1 normal both,
+             blinkTextCursor 500ms steps(40) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 26em;}
+
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: transparent;}
+  to{border-right-color: transparent;}
+}
+
+
+
+
+
+.content1 
+{
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*background: url("/static/kongoni/images/home/background.jpg");*/
+    background-image: radial-gradient(mintcream 0%, lightgray 100%);
+}
+
+
+
+.content2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: "Lato", sans-serif;
+  margin: 0px;
+}
+.portfolio-items-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+  position: relative;  
+}
+
+.portfolio-img-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100%;
+  border-radius: 5%;
+}
+
+.img-text-wrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.img-text-wrapper .subtitle {
+  transition: 1s;
+  color: transparent;
+  font-weight: 600;
+}
+
+.image-blur {
+  transition: 1s;
+  filter: brightness(10%);
+}
+
+.img-text-wrapper:hover .subtitle {
+  color: lightseagreen;
+  font-weight: 300;
+}
+
+.logo-wrapper img {
+  
+  width: 30%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.two-column-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+  width: 100%;
+}
+
+.profile-content-wrapper {
+  padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+  color: lightseagreen;
+}
+
+
+.content3{
+    margin-top: 5px;
+    background-color: azure;
+    border-style: solid;
+    border-color: azure;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    column-count: 3;
+    column-rule: 2px solid lightblue;
+    
+}
+

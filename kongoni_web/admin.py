@@ -66,3 +66,9 @@ class LakeAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Lake, LakeAdmin)
+
+class TourismAdmin(admin.ModelAdmin):
+    list_display = ('name', 'link', 'image')
+
+
+admin.site.register(Tourism, TourismAdmin)

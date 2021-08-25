@@ -81,3 +81,10 @@ class Hospital(models.Model):
     image = models.ImageField(upload_to="media", null=True)
     class Meta:
         db_table = 'Hospitals'
+
+class Tourism(models.Model):
+    name = models.CharField(max_length=100)
+    link = models.CharField(max_length=2083)
+    image = models.ImageField(upload_to="media", null=True)
+    class Meta:
+        db_table = 'Tourism'

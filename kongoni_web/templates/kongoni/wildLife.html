@@ -2,21 +2,21 @@
 {% load static %}
 
 {% block content%}
-<head>
+<head></head>
         <!-- CSS CUSTOM -->
         <link rel="stylesheet" href="{% static 'kongoni/css/wildlife.css' %}" />
 <body>   
     <div class="content">
-        <h3>Kongoni wildlife</h3>
+        <h3>Wildlife in Naivasha.</h3>
         <div class="row">
             {% for item in animal %}
                 <div class="col">
                     <br>
                     <div class="card" style="width: 18rem;">
-                        <img src="{{ item.image.url }}" class="card-img-top" alt="image" width="100" height="250">
+                        <img src="{{ item.image.url }}" class="card-img-top" alt="image" height="220">
                         <div class="card-body" style="text-align: center;">
                             <h5 class="card-title">{{ item.name}}</h5>
-                            <a href="{{ item.link }}" class="btn btn-primary">More...</a>
+                            <a href="{{ item.link }}" class="btn btn-primary" target="blank">Visit Site</a>
                         </div>
                     </div>
                     <br>

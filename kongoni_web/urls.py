@@ -6,6 +6,7 @@ from django.conf.urls import handler404
 
 
 
+
 app_name = 'kongoni_web'
 urlpatterns = [
     path('', views.home, name='home'),
@@ -21,8 +22,8 @@ urlpatterns = [
     path('fashons/', views.fashon, name='fashons'),
     path('hospitals/', views.hospital, name='hospitals'),
     path('contacts/', views.contact, name='contacts'),
+    path('tourism/', views.tourism, name='tourism'),
 ]
-
 
 handler404 = "kongoni_web.views.error_404"
 handler404 = "kongoni_web.views.error_500"

@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
-import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-rq3=)hww2ru*!k47pibdnd%!2c8l3t@fzjwpunu(d54h&d-1qx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['kongoni-web.herokuapp.com', '127.0.0.1'] ###### Remove in ( '*' ) production
+ALLOWED_HOSTS = ['kongoni-web.herokuapp.com', '127.0.0.1'] ###### Remove in ( ''kongoni-web.herokuapp.com'' ) production
 
 
 # Application definition
@@ -70,6 +70,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                 #here add your context Processors
+                #'django.template.context_processors.media',
             ],
         },
     },
@@ -133,7 +135,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Default primary key field type
@@ -145,7 +147,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 
 # Path where media is stored
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # My login settings
 LOGIN_URL = '/users/login/'
 
@@ -161,7 +163,7 @@ if os.getcwd() == '/app':
     ALLOWED_HOSTS = ['*']
     # Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = 'staticfiles'
-    STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'staticfiles'),
+    STATIC_ROOT = 'static'
+    STATIC_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
     )

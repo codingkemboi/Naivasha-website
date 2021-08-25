@@ -1,0 +1,11 @@
+.content
+{
+    margin-top: 7%;
+    border-radius: 20px;
+    border-width: 2px;
+    margin-bottom:60px;
+    background-color: white;
+}
+.content h3 {
+    text-align: center;
+}
