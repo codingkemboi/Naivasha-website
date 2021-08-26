@@ -52,3 +52,6 @@ document.getElementById("message").addEventListener("keyup", function (event) {
       document.getElementById("chatbot_toggle").children[1].style.display = "none"
     }
   }
+
+
+

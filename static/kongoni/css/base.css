@@ -24,8 +24,6 @@ body {
   padding-bottom: 10px;
   padding-left: 20px;
   position: relative;
-  margin-left: -10px;
-  margin-right: -10px;
   font-family: "Poppins", sans-serif;
   top: 0px;
   height: 40px;
@@ -62,22 +60,23 @@ body {
   .navbar .nav-item .dropdown-menu{ margin-top:0; }
 } 
 /* ============ desktop view .end// ============ */
-.navbar a:hover {
-  background-color: rgba(248, 6, 6, 0.822);
+/*.navbar .nav-item a:hover {
+  background-color: red;
   border-radius: 10px;
-}
+}*/
+
 .dropdown-menu a:hover {
   background-color: rgb(6, 221, 250);
 }
 .nav-item {
-  margin-right: 20px;
-  color: white;
+  
   }
   .navbar-dark .navbar-nav .nav-link {
     color: white;
 }
-
-
+.noHover{
+  pointer-events: none;
+}
 
 /* chatbox style*/
 .chatBoxContainer {
