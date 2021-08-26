@@ -9,13 +9,11 @@ body{
 }
 
 
-.content
+.homeContainer
 {
-    margin-bottom: 100px;
-    
+    margin-bottom: 200px;    
     border-radius: 10px;
-    border-top: none;
-    
+    border-top: none;    
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }   
@@ -27,60 +25,77 @@ body{
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     text-align: center;
-    font-family:monospace;
+    font-size: 0.9rem;
     color: white;
-    left: 0%;
-    right: 0;
-  }
-  
-  @keyframes gradient {
+}
+
+@keyframes gradient {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
-
-/* home of oppotu ani*/
-.line-1 anim-typewriter{
-    min-height: 100%;
-    overflow: hidden;
-    height: calc(100vh - 8em);
-    padding: 4em;
-    color: rgba(255,255,255,.75);
-    font-family: 'Anonymous Pro', monospace;  
-    background-color: rgb(25,25,25);
-}
-.line-1{
-    position: relative;
-    top: 50%;  
-    width: auto;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);    
 }
 
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 4s steps(45) 1s 1 normal both,
-             blinkTextCursor 500ms steps(40) infinite normal;
-}
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 26em;}
 
+#container {
+  color:#999;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  padding-top:200px;  
+  position:fixed;
+  width:100%;
+  bottom:45%;
+  display:block;
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: transparent;}
-  to{border-right-color: transparent;}
+
+#flip {
+  height:50px;
+  overflow:hidden;
 }
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+
+
+
+
 
 
 
@@ -97,7 +112,7 @@ body{
 
 
 
-.content2 {
+.homeImages {
   display: grid;
   grid-template-columns: 1fr;
   font-family: "Lato", sans-serif;
@@ -176,6 +191,13 @@ body{
 .profile-content-wrapper h1 {
   color: lightseagreen;
 }
+
+
+
+
+
+
+
 
 
 .content3{
