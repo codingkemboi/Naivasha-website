@@ -69,11 +69,8 @@ body {
 .dropdown-menu a:hover {
   background-color: rgb(6, 221, 250);
 }
-.nav-item {
-  
-  }
-  .navbar-dark .navbar-nav .nav-link {
-    color: white;
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
 }
 .noHover{
   pointer-events: none;
