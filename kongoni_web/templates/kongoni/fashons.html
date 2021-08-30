@@ -11,15 +11,15 @@
 <body>
      
     <div class="content">   
-        <h3>Fashons in Naivasha.</h3>
+        <h4>Fashon Designs in Naivasha Sub-County.</h4>
             <div class="row">
                 {% for item in fashon %}
                     <div class="col">
                         <br>
-                        <div class="card" style="width: 18rem;">
-                            <img src="{{ item.image.url }}" class="card-img-top" alt="image" height="150">
+                        <div class="card" style="width: 12rem; height: 13rem;">
+                            <img src="{{ item.image.url }}" class="card-img-top" alt="image" height="95">
                             <div class="card-body" style="text-align: center;">
-                                <h5 class="card-title">{{ item.name }}</h5>
+                                <h6 class="card-title">{{ item.name }}</h6>
                                 <a href="{{ item.link }}" class="btn btn-primary" target="blank">Visit Site</a>
                             </div>
                         </div>

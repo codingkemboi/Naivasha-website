@@ -1,14 +1,16 @@
 .content
 {
-    margin-top: 7%;
     border-radius: 20px;
     border-width: 2px;
     margin-bottom:100px;
-    background-color: white;
-    padding-left: 20px;
-    padding-top: 20px;
-    
+    background-color: rgb(70,80,62);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
 }
-.content h3 {
+.content h4 {
     text-align: center;
+    color: white;
+    
 }

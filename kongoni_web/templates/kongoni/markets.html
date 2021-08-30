@@ -11,15 +11,15 @@
 <body>
 <div class="content">
 
-    <h3>Trading Centres in Naivasha.</h3>
+    <h4>Trading Centres in Naivasha Sub-County</h4>
     <div class="row">
         {% for item in market %}
         <div class="col">
             <br>
-            <div class="card" style="width: 18rem;">
-                <img src="{{ item.image.url }}" class="card-img-top" alt="markets image" width="100px" height="200">
+            <div class="card" style="width: 12rem; height: 13rem;">
+                <img src="{{ item.image.url }}" class="card-img-top" alt="markets image" height="95">
                 <div class="card-body" style="text-align: center;">
-                    <h5 class="card-title">{{ item.name}}</h5>
+                    <h5 class="card-title">{{ item.name }}</h5>
                     <a href="{{ item.link }}" class="btn btn-primary" target="blank">Visit Site</a>
                 </div>
             </div>
