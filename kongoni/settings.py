@@ -71,7 +71,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                  #here add your context Processors
-                #'django.template.context_processors.media',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -181,6 +181,3 @@ if os.getcwd() == '/app':
     STATIC_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     )
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
