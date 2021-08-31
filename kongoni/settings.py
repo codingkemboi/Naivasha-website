@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-rq3=)hww2ru*!k47pibdnd%!2c8l3t@fzjwpunu(d54h&d-1qx
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['naivasha-website.herokuapp.com', '127.0.0.1'] ###### Remove in ( ''kongoni-web.herokuapp.com'' ) production
+ALLOWED_HOSTS = ['naivasha.herokuapp.com', '127.0.0.1'] ###### Remove in ( ''kongoni-web.herokuapp.com'' ) production
 
 
 # Application definition
