@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rq3=)hww2ru*!k47pibdnd%!2c8l3t@fzjwpunu(d54h&d-1qx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['kongoni-web.herokuapp.com', '127.0.0.1'] ###### Remove in ( ''kongoni-web.herokuapp.com'' ) production
 
 
@@ -147,7 +147,7 @@ else:
 
   STATIC_ROOT = os.path.join(BASE_DIR, 'static') 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
