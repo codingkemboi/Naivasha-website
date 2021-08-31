@@ -12,10 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -45,7 +41,7 @@ INSTALLED_APPS = [
     'kongoni_web.apps.KongoniWebConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
-    "cloudinary",
+    #"cloudinary",
 ]
 
 MIDDLEWARE = [
@@ -151,7 +147,7 @@ else:
 
   STATIC_ROOT = os.path.join(BASE_DIR, 'static') 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/media')
 
 
 
@@ -187,9 +183,3 @@ if os.getcwd() == '/app':
     )
 
 
-cloudinary.config( 
-  cloud_name = "hy3klfn4i", 
-  api_key = "948627794999738", 
-  api_secret = "2QDX_qeVICB8GG8BkSXGZKthogY",
-  secure = True
-)
