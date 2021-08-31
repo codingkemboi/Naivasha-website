@@ -1,0 +1,41 @@
+body
+{
+    
+    background-color: rgb(70,80,62);
+   
+}
+.content h4 {
+    text-align: center;
+    color: white;
+    
+    font-size: 1rem;
+}
+.link-wrapper {
+    display: none;
+  }
+
+  .card:hover .link-wrapper {
+    display: block;
+    
+  }
+
+  .card{
+    border-radius: 4px;
+    /*background: #fff;*/
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    /*padding: 14px 80px 18px 36px;*/
+    cursor: pointer;
+  }
+  .card:hover{
+    transform: scale(0.9);
+    box-shadow: 0 5px 10px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+
+  /* Portrait tablets and landscape mobiles*/
+  @media (max-width: 767px) {
+    .link-wrapper {
+        display: block;        
+      }
+    
+  }

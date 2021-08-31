@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+body{
+  margin:0px;
+  padding: 0px;
+  background-image: url("/static/kongoni/images/home/background.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.homeContainer
+{
+    margin-bottom: 200px;    
+    border-radius: 10px;
+    border-top: none;    
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}   
+
+  /* naivasha header stylesheet*/
+
+  .naivasha {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
