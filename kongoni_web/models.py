@@ -22,12 +22,12 @@ class Fashon(models.Model):
         verbose_name = 'Fashon List'
 
 
-class Lake(models.Model):
+class Farm(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to="media", null=True)
     link = models.CharField(max_length=2083)
     class Meta:
-        db_table = 'Lakes'
+        db_table = 'Agriculture'
 
 
 class Market(models.Model):
@@ -46,12 +46,12 @@ class WildLife(models.Model):
         db_table = 'Wildlife'
     
 
-class Station(models.Model):
+class Office(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
     image = models.ImageField(upload_to="media", null=True)
     class Meta:
-        db_table = 'Stations'
+        db_table = 'Offices'
  
 
 class Sport(models.Model):
@@ -68,12 +68,12 @@ class School(models.Model):
     class Meta:
         db_table = 'Schools'
 
-class Trend(models.Model):
+class News(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
     image = models.ImageField(upload_to="media", null=True)
     class Meta:
-        db_table = 'Trends'
+        db_table = 'News'
 
 class Hospital(models.Model):
     name = models.CharField(max_length=100)
@@ -82,9 +82,9 @@ class Hospital(models.Model):
     class Meta:
         db_table = 'Hospitals'
 
-class Tourism(models.Model):
+class Travel(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
     image = models.ImageField(upload_to="media", null=True)
     class Meta:
-        db_table = 'Tourism'
+        db_table = 'Travel'

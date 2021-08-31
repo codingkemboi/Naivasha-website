@@ -32,12 +32,12 @@ class MarketAdmin(admin.ModelAdmin):
 admin.site.register(Market, MarketAdmin)
 
 
-class StationAdmin(admin.ModelAdmin):
+class OfficeAdmin(admin.ModelAdmin):
     search_fields = ("name__startswith", )
     list_display = ('name', 'link', 'image')
 
 
-admin.site.register(Station, StationAdmin)
+admin.site.register(Office, OfficeAdmin)
 
 
 class SportAdmin(admin.ModelAdmin):
@@ -54,21 +54,21 @@ class SchoolAdmin(admin.ModelAdmin):
 admin.site.register(School, SportAdmin)
 
 
-class TrendAdmin(admin.ModelAdmin):
+class NewsAdmin(admin.ModelAdmin):
     list_display = ('name', 'link', 'image')
 
 
-admin.site.register(Trend, TrendAdmin)
+admin.site.register(News, NewsAdmin)
 
 
-class LakeAdmin(admin.ModelAdmin):
+class FarmAdmin(admin.ModelAdmin):
     list_display = ('name', 'link', 'image')
 
 
-admin.site.register(Lake, LakeAdmin)
+admin.site.register(Farm, FarmAdmin)
 
-class TourismAdmin(admin.ModelAdmin):
+class TravelAdmin(admin.ModelAdmin):
     list_display = ('name', 'link', 'image')
 
 
-admin.site.register(Tourism, TourismAdmin)
+admin.site.register(Travel, TravelAdmin)

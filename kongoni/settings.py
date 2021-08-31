@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,8 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rq3=)hww2ru*!k47pibdnd%!2c8l3t@fzjwpunu(d54h&d-1qx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+DEBUG = True
 ALLOWED_HOSTS = ['kongoni-web.herokuapp.com', '127.0.0.1'] ###### Remove in ( ''kongoni-web.herokuapp.com'' ) production
 
 
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
     'kongoni_web.apps.KongoniWebConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
+    "cloudinary",
 ]
 
 MIDDLEWARE = [
@@ -181,3 +185,11 @@ if os.getcwd() == '/app':
     STATIC_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     )
+
+
+cloudinary.config( 
+  cloud_name = "hy3klfn4i", 
+  api_key = "948627794999738", 
+  api_secret = "2QDX_qeVICB8GG8BkSXGZKthogY",
+  secure = True
+)

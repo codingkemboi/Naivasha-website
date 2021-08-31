@@ -14,15 +14,15 @@ urlpatterns = [
     path('wildlife/', views.wild_life, name='wildlife'),
     path('markets/', views.market, name='markets'),
     path('sports/', views.sport, name='sports'),
-    path('trends/', views.trend, name='trends'),
+    path('news/', views.news, name='news'),
     path('schools/', views.school, name='schools'),
     path('about/', views.about, name='about'),
-    path('lakes/', views.lake, name='lakes'),
-    path('police/', views.station, name='station'),
+    path('farming/', views.farm, name='farms'),
+    path('offices/', views.office, name='offices'),
     path('fashons/', views.fashon, name='fashons'),
     path('hospitals/', views.hospital, name='hospitals'),
     path('contacts/', views.contact, name='contacts'),
-    path('tourism/', views.tourism, name='tourism'),
+    path('travels/', views.travel, name='travels'),
 ]
 
 handler404 = "kongoni_web.views.error_404"
