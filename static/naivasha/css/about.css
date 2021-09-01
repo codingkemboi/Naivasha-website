@@ -10,7 +10,7 @@ html {
     width: 100%;
   }
 body{
-    background: url("/static/kongoni/images/home/background.jpg");
+    background: url("/static/naivasha/images/home/background.jpg");
     background-repeat:no-repeat; 
     background-size: cover;
     background-attachment: fixed;

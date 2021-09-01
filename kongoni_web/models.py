@@ -5,7 +5,7 @@ from django.db import models
 class Hotel(models.Model):
     name = models.CharField(max_length=50)
     link = models.CharField(max_length=2083)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     class Meta:
         db_table = 'Hotels'
         # Add verbose name
@@ -15,7 +15,7 @@ class Hotel(models.Model):
 class Fashon(models.Model):
     name = models.CharField(max_length=255)
     link = models.CharField(max_length=2083)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     class Meta:
         db_table = 'Fashons'
         # Add verbose name
@@ -24,7 +24,7 @@ class Fashon(models.Model):
 
 class Farm(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     link = models.CharField(max_length=2083)
     class Meta:
         db_table = 'Agriculture'
@@ -33,7 +33,7 @@ class Farm(models.Model):
 class Market(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     class Meta:
         db_table = 'Markets'
 
@@ -41,7 +41,7 @@ class Market(models.Model):
 class WildLife(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     class Meta:
         db_table = 'Wildlife'
     
@@ -49,7 +49,7 @@ class WildLife(models.Model):
 class Office(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     class Meta:
         db_table = 'Offices'
  
@@ -57,34 +57,34 @@ class Office(models.Model):
 class Sport(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     class Meta:
         db_table = 'Sports'
 
 class School(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     class Meta:
         db_table = 'Schools'
 
 class News(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     class Meta:
         db_table = 'News'
 
 class Hospital(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     class Meta:
         db_table = 'Hospitals'
 
 class Travel(models.Model):
     name = models.CharField(max_length=100)
     link = models.CharField(max_length=2083)
-    image = models.ImageField(upload_to="media", null=True)
+    image = models.ImageField(blank="False", null=True)
     class Meta:
         db_table = 'Travel'

@@ -136,9 +136,6 @@ STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Base url to serve media files
 MEDIA_URL = '/media/'
-# Path where media is stored
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 if DEBUG:
 
   STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
@@ -146,10 +143,8 @@ if DEBUG:
 else:
 
   STATIC_ROOT = os.path.join(BASE_DIR, 'static') 
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+# Path where media is stored
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 
 
