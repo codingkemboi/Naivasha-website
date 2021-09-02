@@ -72,3 +72,9 @@ class TravelAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Travel, TravelAdmin)
+
+class HospitalAdmin(admin.ModelAdmin):
+    list_display = ('name', 'link', 'image')
+
+
+admin.site.register(Hospital, HospitalAdmin)
